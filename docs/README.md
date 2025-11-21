@@ -4,16 +4,6 @@
 
 Dog Bone Tracker is a software package designed to help dog owners keep track of their dog's bones. It allows the user to create a list of their dog's bones, record the number of bones the dog has, and keep track of when bones have been given to the dog.
 
-### Mermaid Diagram
-
-```mermaid
-graph TD;
-  A-->B;
-  A-->C;
-  B-->D;
-  C-->D;
-```
-
 ## Features
 
 - Create a list of the dog's bones
@@ -42,6 +32,20 @@ To install Dog Bone Tracker, follow these steps:
     
     `npm start` 
     
+
+## ER Diagram
+This is a fancy diagram explaining this:
+```mermaid
+erDiagram
+          DOG }|..|{ PAW-PRINT : has
+          DOG ||--o{ VERIFICATION : places
+          DOG ||--o{ IDENTITY-VERIFICATION : "liable for"
+          PAW-PRINT ||--o{ VERIFICATION : receives
+          IDENTITY-VERIFICATION ||--|{ VERIFICATION : covers
+          VERIFICATION ||--|{ VERIFICATION-ITEM : includes
+          DOG-BREED ||--|{ BREED : contains
+          BREED ||--o{ VERIFICATION-ITEM : "ordered in"
+```
 
 
 ## Usage
